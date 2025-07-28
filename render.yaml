@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: signalr-server
+    env: dotnet
+    buildCommand: dotnet build
+    startCommand: dotnet APP2signalr.dll
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+    autoDeploy: true
+    branch: main
+    region: singapore
